@@ -43,7 +43,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-black text-white w-full flex flex-col-reverse sm:flex-row  justify-between items-center py-10 mx-auto container sm:max-w-none px-2 sm:px-20">
+    <div className="bg-black text-white w-full flex flex-col-reverse sm:flex-row  justify-between items-center py-10 mx-auto container sm:max-w-none px-2 sm:px-20 relative">
       <div className="flex flex-col-reverse  sm:flex-col space-y-20 justify-between items-center sm:gap-0 gap-20">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="146" height="24">
@@ -99,39 +99,46 @@ const Footer = () => {
           <li className="hover:text-orange-400">privcy policy</li>
         </ul>
       </div>
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="space-x-6 flex justify-normal my-2"
-        >
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input
-                    placeholder="update in your inbox ..."
-                    {...field}
-                    className={`${
-                      form.formState.errors.email
-                        ? "text-orange-600 focus:outline-none outline-none border-2 border-orange-600"
-                        : "text-gray-800"
-                    } placeholder:text-gray-600`}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button
-            type="submit"
-            className="rounded-xl text-white py-2 px-4 w-fit bg-orange-600 hover:bg-orange-400 active:bg-orange-400"
+      <div className="flex flex-col justify-between items-center gap-20">
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="space-x-6 flex justify-normal my-2"
           >
-            go
-          </Button>
-        </form>
-      </Form>
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      placeholder="update in your inbox ..."
+                      {...field}
+                      className={`${
+                        form.formState.errors.email
+                          ? "text-orange-600 focus:outline-none outline-none border-2 border-orange-600"
+                          : "text-gray-800"
+                      } placeholder:text-gray-600`}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button
+              type="submit"
+              className="rounded-xl text-white py-2 px-4 w-fit bg-orange-600 hover:bg-orange-400 active:bg-orange-400"
+            >
+              go
+            </Button>
+          </form>
+        </Form>
+        <div className="absolute bottom-0 left-auto sm:relative">
+          <span className="text-gray-500">
+            Copyright {new Date().getFullYear()}. All rights reserved.
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
