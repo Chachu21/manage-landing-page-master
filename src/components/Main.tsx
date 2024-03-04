@@ -18,7 +18,7 @@ const Main = () => {
       name: "Anisha Li",
       image: "/images/avatar-anisha.png",
       description:
-        "we have been able to cancel so many other subscriptions since using manage. there is no more cross-channel confusion and everyone is much more focused.",
+        "Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.",
     },
     {
       name: "Ali Bravo",
@@ -30,14 +30,14 @@ const Main = () => {
       name: "Rechard Watts",
       image: "/images/avatar-richard.png",
       description:
-        "we have been able to cancel so many other subscriptions since using manage. there is no more cross-channel confusion and everyone is much more focused.",
+        "Manage allows us to provide structure and process; it keeps us organized and focused. I can’t stop recommending them to everyone I talk too!",
     },
 
     {
-      name: "Shanai",
+      name: "Shanai Gough",
       image: "/images/avatar-shanai.png",
       description:
-        "we have been able to cancel so many other subscriptions since using manage. there is no more cross-channel confusion and everyone is much more focused.",
+        "Their software allows us to track, manage, and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.",
     },
   ];
 
@@ -119,7 +119,7 @@ const Main = () => {
           <Carousel
             plugins={[
               Autoplay({
-                delay: 2000,
+                delay: 10000,
               }),
             ]}
             opts={{
@@ -143,7 +143,7 @@ const Main = () => {
                       <span className="text-gray-700 font-bold text-sm pt-10">
                         {image.name}
                       </span>
-                      <p className="text-sm font-normal flex text-gray-400 text-center pb-2">
+                      <p className="text-sm font-normal px-5 flex text-gray-400 text-center pb-5">
                         {image.description}
                       </p>
                     </Card>
