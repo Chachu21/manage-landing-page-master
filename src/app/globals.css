@@ -29,7 +29,7 @@
   .bg_desktop {
     background-image: url("/images/bg-tablet-pattern.svg");
     background-repeat: no-repeat;
-    background-position: 80px -100px;
+    background-position: 70px -90px;
     background-size: contain;
   }
   .bg_main {

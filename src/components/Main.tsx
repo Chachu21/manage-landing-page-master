@@ -119,7 +119,7 @@ const Main = () => {
           <Carousel
             plugins={[
               Autoplay({
-                delay: 10000,
+                delay: 8000,
               }),
             ]}
             opts={{
@@ -131,19 +131,19 @@ const Main = () => {
             <CarouselContent className="flex">
               {images.map((image, index) => (
                 <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
-                  <div className="py-5 px-0 sm:px-10 w-full container mx-auto sm:mx-0 max-w-none ">
-                    <Card className="flex flex-col justify-center items-center space-y-5 relative mt-10 w-fit">
+                  <div className="py-5 px-0 sm:px-10 ">
+                    <Card className="flex flex-col justify-center items-center space-y-5 relative mt-10 ">
                       <Image
                         src={image.image}
                         width={80}
                         height={80}
                         alt={image.name}
-                        className="absolute -top-[30px] left-auto object-contain"
+                        className="absolute -top-[30px] left-auto object-cover"
                       />
-                      <span className="text-gray-700 font-bold text-sm pt-10">
+                      <span className="text-gray-700 font-bold text-sm pt-10 text-center">
                         {image.name}
                       </span>
-                      <p className="text-sm font-normal px-5 flex text-gray-400 text-center pb-5">
+                      <p className="text-sm font-normal flex text-gray-400 text-center pb-2">
                         {image.description}
                       </p>
                     </Card>
